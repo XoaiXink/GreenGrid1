@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Connect4.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -154,7 +155,6 @@
     <None Include="Resources\tree.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connect4.ico" />
     <None Include="Resources\button_click.wav" />
     <None Include="Resources\background_music.wav" />
     <None Include="Resources\undo.png" />

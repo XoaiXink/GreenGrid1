@@ -478,7 +478,7 @@ namespace Green_Grid
                 }
             }
         }
-        private async void btnColumn7_Click(object sender, EventArgs g)
+        private async void btnColumn7_Click(object sender, EventArgs e)
         {
             if (playwithbots)
             {
