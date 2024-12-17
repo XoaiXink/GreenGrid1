@@ -58,16 +58,6 @@ namespace Green_Grid
                 MessageBox.Show($"Failed to set border color attribute: {ex.Message}");
             }
         }
-
-        // Static async method to play a sound file
-        public async static void PlaySound(string filePath)
-        {
-            using (SoundPlayer player = new SoundPlayer(filePath))
-            {
-                player.Play();
-            }
-        }
-        // Method to play a click sound
         private void PlayClickSound()
         {
             try
