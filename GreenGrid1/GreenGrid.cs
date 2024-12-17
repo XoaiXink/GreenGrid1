@@ -132,9 +132,9 @@ namespace Green_Grid
             this.playwithbots = playwithbots;
         }
 
-        private async void BtnColumn1_Click(object sender, EventArgs g)
+        private async void BtnColumn1_Click(object sender, EventArgs e)
         {
-            if (gameEnded == false && a < 42) // Check if the game is still ongoing and the total number of moves is less than 42 (maximum moves in Connect Four)
+            if (gameEnded == false && a < 6) // Check if the game has ended and if the column has been filled with discs
             {
                 if (playwithbots)
                 {
@@ -149,7 +149,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Find the first empty button (its background color is set to the theme color)
                     {
                         // Set the button's background image based on the current turn (Yellow or Red)
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch; // Set image layout to stretch to fill the button
                         btn.BackColor = turn; // Set the button's background color to the current player's color
@@ -190,9 +190,9 @@ namespace Green_Grid
             }
         }
 
-        private async void BtnColumn2_Click(object sender, EventArgs g)
+        private async void BtnColumn2_Click(object sender, EventArgs e)
         {
-            if (gameEnded == false && a < 42) // Check if the game is still ongoing and the total number of moves is less than 42 (maximum moves in Connect Four)
+            if (gameEnded == false && a < 6) //Check if the game has ended and if the column has been filled with discs
             {
                 if (playwithbots)
                 {
@@ -207,7 +207,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Find the first empty button (its background color is set to the theme color)
                     {
                         // Set the button's background image based on the current turn (Yellow or Red)
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch; // Set image layout to stretch to fill the button
                         btn.BackColor = turn; // Set the button's background color to the current player's color
@@ -223,7 +223,7 @@ namespace Green_Grid
                 PlayClickSound();
 
                 // Increment the move counter and the total move count
-                a++;
+                b++;
                 moveCounter++;
 
                 // Clear the redo list (reset the state for undo/redo functionality)
@@ -248,13 +248,13 @@ namespace Green_Grid
             }
         }
 
-        private async void BtnColumn3_Click(object sender, EventArgs g)
+        private async void BtnColumn3_Click(object sender, EventArgs e)
         {
             if (playwithbots)
             {
                 ToggleButtons(false);
             }
-            if (gameEnded == false && a < 42) // Check if the game is still ongoing and the total number of moves is less than 42 (maximum moves in Connect Four)
+            if (gameEnded == false && c < 6) //Check if the game has ended and if the column has been filled with discs
             {
                 // List of buttons representing the rows of the third column
                 Button[] buttonsArray = { b31, b32, b33, b34, b35, b36 };
@@ -265,7 +265,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Find the first empty button (its background color is set to the theme color)
                     {
                         // Set the button's background image based on the current turn (Yellow or Red)
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch; // Set image layout to stretch to fill the button
                         btn.BackColor = turn; // Set the button's background color to the current player's color
@@ -281,7 +281,7 @@ namespace Green_Grid
                 PlayClickSound();
 
                 // Increment the move counter and the total move count
-                a++;
+                c++;
                 moveCounter++;
 
                 // Clear the redo list (reset the state for undo/redo functionality)
@@ -306,13 +306,13 @@ namespace Green_Grid
             }
         }
 
-        private async void BtnColumn4_Click(object sender, EventArgs g)
+        private async void BtnColumn4_Click(object sender, EventArgs e)
         {
             if (playwithbots)
             {
                 ToggleButtons(false);
             }
-            if (gameEnded == false && a < 42) // Check if the game is not over and the number of moves is less than 42 (the maximum possible moves in Connect Four)
+            if (gameEnded == false && d < 6) //Check if the game has ended and if the column has been filled with discs
             {
                 // List of buttons representing the rows in the fourth column
                 Button[] buttonsArray = { b41, b42, b43, b44, b45, b46 };
@@ -323,7 +323,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Find the first empty button (its background color is the theme color, indicating an empty spot)
                     {
                         // Set the button's background image based on the current player's color (Yellow or Red)
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch; // Stretch the image to fill the button's area
                         btn.BackColor = turn; // Set the button's background color to the current player's color
@@ -339,7 +339,7 @@ namespace Green_Grid
                 PlayClickSound();
 
                 // Increment the move counter and the total number of moves
-                a++;
+                d++;
                 moveCounter++;
 
                 // Clear the redo stack (reset the state for any potential undo/redo functionality)
@@ -363,13 +363,13 @@ namespace Green_Grid
                 }
             }
         }
-        private async void BtnColumn5_Click(object sender, EventArgs g)
+        private async void BtnColumn5_Click(object sender, EventArgs e)
         {
             if (playwithbots)
             {
                 ToggleButtons(false);
             }
-            if (gameEnded == false && a < 42) // Check if the game is not over and the number of moves is less than 42 (maximum possible moves in Connect Four)
+            if (gameEnded == false && f < 6) //Check if the game has ended and if the column has been filled with discs
             {
                 // List of buttons representing the rows in the fifth column
                 Button[] buttonsArray = { b51, b52, b53, b54, b55, b56 };
@@ -380,7 +380,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Find the first empty button (its background color is the theme color, indicating an empty spot)
                     {
                         // Set the button's background image based on the current player's color (Yellow or Red)
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch; // Stretch the image to fill the button's area
                         btn.BackColor = turn; // Set the button's background color to the current player's color
@@ -396,7 +396,7 @@ namespace Green_Grid
                 PlayClickSound();
 
                 // Increment the move counter and the total number of moves
-                a++;
+                f++;
                 moveCounter++;
 
                 // Clear the redo stack (reset the state for any potential undo/redo functionality)
@@ -421,13 +421,13 @@ namespace Green_Grid
             }
         }
 
-        private async void btnColumn6_Click(object sender, EventArgs g)
+        private async void btnColumn6_Click(object sender, EventArgs e)
         {
             if (playwithbots)
             {
                 ToggleButtons(false);
             }
-            if (gameEnded == false && a < 42) // Check if the game is not over and the number of moves is less than 42 (maximum possible moves in Connect Four)
+            if (gameEnded == false && g < 6) //Check if the game has ended and if the column has been filled with discs
             {
                 // List of buttons representing the rows in the sixth column
                 Button[] buttonsArray = { b61, b62, b63, b64, b65, b66 };
@@ -438,7 +438,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Find the first empty button (its background color is the theme color, indicating an empty spot)
                     {
                         // Set the button's background image based on the current player's color (Yellow or Red)
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch; // Stretch the image to fill the button's area
                         btn.BackColor = turn; // Set the button's background color to the current player's color
@@ -454,7 +454,7 @@ namespace Green_Grid
                 PlayClickSound();
 
                 // Increment the move counter and the total number of moves
-                a++;
+                g++;
                 moveCounter++;
 
                 // Clear the redo stack (reset the state for any potential undo/redo functionality)
@@ -484,7 +484,7 @@ namespace Green_Grid
             {
                 ToggleButtons(false);
             }
-            if (gameEnded == false && a < 42) // Check if the game is not over and the number of moves is less than 42 (maximum possible moves in Connect Four)
+            if (gameEnded == false && h < 6) //Check if the game has ended and if the column has been filled with discs
             {
                 // List of buttons representing the rows in the seventh column
                 Button[] buttonsArray = { b71, b72, b73, b74, b75, b76 };
@@ -495,7 +495,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Find the first empty button (its background color is the theme color, indicating an empty spot)
                     {
                         // Set the button's background image based on the current player's color (Yellow or Red)
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch; // Stretch the image to fill the button's area
                         btn.BackColor = turn; // Set the button's background color to the current player's color
@@ -511,7 +511,7 @@ namespace Green_Grid
                 PlayClickSound();
 
                 // Increment the move counter and the total number of moves
-                a++;
+                h++;
                 moveCounter++;
 
                 // Clear the redo stack (reset the state for any potential undo/redo functionality)
@@ -551,7 +551,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Check if the button is empty (its background color matches the theme)
                     {
                         // Set the button's background image and color based on the current player's turn (Yellow or Red)
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch; // Stretch the image to fit the button
                         btn.BackColor = turn; // Set the button's background color to the current player's color
@@ -573,7 +573,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Check if the button is empty
                     {
                         // Set the button's background image and color based on the current player's turn
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch;
                         btn.BackColor = turn;
@@ -595,7 +595,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Check if the button is empty
                     {
                         // Set the button's background image and color based on the current player's turn
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch;
                         btn.BackColor = turn;
@@ -617,7 +617,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Check if the button is empty
                     {
                         // Set the button's background image and color based on the current player's turn
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch;
                         btn.BackColor = turn;
@@ -638,7 +638,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Check if the button is empty
                     {
                         // Set the button's background image and color based on the current player's turn
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch;
                         btn.BackColor = turn;
@@ -660,7 +660,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Check if the button is empty
                     {
                         // Set the button's background image and color based on the current player's turn
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch;
                         btn.BackColor = turn;
@@ -682,7 +682,7 @@ namespace Green_Grid
                     if (btn.BackColor == theme) // Check if the button is empty
                     {
                         // Set the button's background image and color based on the current player's turn
-                         Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+                        Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
                         btn.BackgroundImage = image;
                         btn.BackgroundImageLayout = ImageLayout.Stretch;
                         btn.BackColor = turn;
@@ -842,7 +842,7 @@ namespace Green_Grid
         private void btnTurn_Click(object sender, EventArgs e)
         {
             //Determine the bot's image based on the current turn
-             Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
+            Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle;
             btnTurn.BackgroundImage = image; // Set the background image
             btnTurn.BackgroundImageLayout = ImageLayout.Stretch; // Stretch the image to fit
         }
@@ -1144,7 +1144,8 @@ namespace Green_Grid
                 (b42.BackColor == b33.BackColor && b33.BackColor == b24.BackColor && b24.BackColor == b15.BackColor && b42.BackColor != theme) ||
                 (b43.BackColor == b34.BackColor && b34.BackColor == b25.BackColor && b25.BackColor == b16.BackColor && b43.BackColor != theme))
             #endregion
-            { if (!gameEnded)
+            {
+                if (!gameEnded)
                 {
                     gameEnded = true; // Flag indicating the game has ended.
 
@@ -1261,7 +1262,7 @@ namespace Green_Grid
             // Display the move counnt
             lblMove.Text = $"Move : {moveCounter}";
             // Update the player's turn indicator (Tree or Recycle image)
-             Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle; // hiển thị lượt của người chơi nào
+            Image image = (turn == Color.Red) ? GreenGrid1.Properties.Resources.tree : GreenGrid1.Properties.Resources.recycle; // hiển thị lượt của người chơi nào
             btnTurn.BackgroundImage = image;
             btnTurn.BackgroundImageLayout = ImageLayout.Stretch;// Adjust the image layout
         }
